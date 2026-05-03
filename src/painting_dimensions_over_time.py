@@ -45,6 +45,9 @@ blue_area["percentage_blue_area"] = (blue_area["blue_area"]/blue_area["area"]) *
 print("\nMondorian painting ids where blue color is used and it's area: ")
 print(blue_area)
 
+# save under processed data
+blue_area.to_csv("data/processed/percentage-of-blue-used-in-mondorian-painting.csv")
+
 # Plot the percentage of blue in each painting over time.
 plt.plot(blue_area["year"], blue_area["percentage_blue_area"], marker='o')
 
